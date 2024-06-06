@@ -5,10 +5,9 @@ import java.util.List;
 
 public class Project {
 
+	private List<Issue> issues = new LinkedList<>();
 
-	public static List<Issue> issues = new LinkedList<>();
-	
-	public static List<Milestone> milestones = new LinkedList<>();
+	private List<Milestone> milestones = new LinkedList<>();
 
 	public List<Issue> getIssues() {
 		return issues;
@@ -18,7 +17,7 @@ public class Project {
 		this.issues = issues;
 	}
 
-	public static List<Milestone> getMilestones() {
+	public List<Milestone> getMilestones() {
 		return milestones;
 	}
 

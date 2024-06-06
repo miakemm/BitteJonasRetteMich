@@ -3,6 +3,7 @@ package de.uniba.wiai.dsg.ajp.assignment2.issuetracking.logic;
 import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.IssueTracker;
 import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.IssueTrackingException;
 import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.ProjectService;
+import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.Project;
 
 public class IssueTrackerImpl implements IssueTracker {
 
@@ -28,7 +29,9 @@ public class IssueTrackerImpl implements IssueTracker {
 
 	@Override
 	public ProjectService create() {
-		// TODO Auto-generated method stub
+
+	Project project = new Project();
+
 		return null;
 	}
 

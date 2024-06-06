@@ -11,13 +11,16 @@ import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.Milestone;
 import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.Severity;
 import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.Type;
 import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.Project;
+import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.State;
+
+import static de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.State.CLOSED;
 
 public class ProjectServiceImpl implements ProjectService {
 
 	@Override
 	public void createMilestone(String id, String name, Set<String> issueIds)
 			throws IssueTrackingException {
-		if (id == null || id.isEmpty() || ValidationHelper.isId(id)) {
+		if (id == null || id.isEmpty() || !ValidationHelper.isId(id)) {
 			throw new IssueTrackingException("ERROR with createMilestone: Milestone ID cannot be null or empty");
 		}
 		if (name == null || name.isEmpty()) {
@@ -37,14 +40,14 @@ public class ProjectServiceImpl implements ProjectService {
 		}
 		milestone.setIssues(issues);
 
-		Project.milestones.add(milestone);
+		Project.getMilestones().add(milestone);
 
 	}
 
 
 	@Override
 	public List<Milestone> getMilestones() {
-		return Project.milestones;
+		return Project.getMilestones();
 	}
 
 	public void printMilestones() {
@@ -60,7 +63,7 @@ public class ProjectServiceImpl implements ProjectService {
 			throw new IssueTrackingException("ERROR with removeMilestoneById: Milestone ID cannot be null or empty");
 		}
 
-		boolean removed = Project.milestones.removeIf(milestone -> milestone.getId().equals(id));
+		boolean removed = Project.getMilestones().removeIf(milestone -> milestone.getId().equals(id));
 
 		if (!removed) {
 			throw new IssueTrackingException("Milestone with ID " + id + " not found");
@@ -95,23 +98,23 @@ public class ProjectServiceImpl implements ProjectService {
 		}
 
 		Issue issue = new Issue(id, name);
-
+	
 		issue.setDescription(description);
 		issue.setSeverity(severity);
 		issue.setType(type);
 
 
-		issue.setIssue(issue);
-		issue.setDependencies(dependencies);
 
-		Project.issues.add(issue);
+		//TODO dependencies einfügen
+
+		Project.getIssues().add(issue);
 
 	}
 
 	@Override
 
 	public List<Issue> getIssues() {
-		return Project.issues;
+		return Project.getIssues();
 	}
 
 	public void printIssues() {
@@ -123,11 +126,11 @@ public class ProjectServiceImpl implements ProjectService {
 
 	@Override
 	public void removeIssueById(String id) throws IssueTrackingException {
-		if (id == null || id.isEmpty()) {
+		if (id == null || !id.isEmpty()) {
 			throw new IssueTrackingException("ERROR with removeMilestoneById: Milestone ID cannot be null or empty");
 		}
 
-		boolean removed = Project.issues.removeIf(issue -> issue.getId().equals(id));
+		boolean removed = Project.getIssues().removeIf(issue -> issue.getId().equals(id));
 
 		if (!removed) {
 			throw new IssueTrackingException("Issue with ID " + id + " not found");
@@ -137,9 +140,13 @@ public class ProjectServiceImpl implements ProjectService {
 
 	@Override
 	public void closeIssueById(String id) throws IssueTrackingException {
-		// TODO Auto-generated method stub
 
-	}
+		for (Issue issue : getIssues()) {
+			if (issue.getId().equals(id)) {
+				issue.setState(State.CLOSED);}
+
+
+	}}
 
 	@Override
 	public void printJsonToConsole() throws IssueTrackingException {

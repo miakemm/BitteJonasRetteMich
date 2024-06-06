@@ -20,12 +20,10 @@ public class Issue {
 
 	private Milestone milestone;
 
-	private Set<String> dependencies = new LinkedList<>();
+	private List<Issue> dependencies = new LinkedList<>();
 
-	public Issue(String issueId, String s) { // NEU EINGEFÜGT
-
+	public Issue(String issueId, String s) {
 	}
-
 
 
 	public String getId() {
@@ -88,7 +86,7 @@ public class Issue {
 		return dependencies;
 	}
 
-	public void setDependencies(Set<String> dependencies) {
+	public void setDependencies(List<Issue> dependencies) {
 		this.dependencies = dependencies;
 	}
 
@@ -109,7 +107,4 @@ public class Issue {
 				+ ", dependsUponIssues=( " + issueNames + ")]";
 	}
 
-	public void setIssue(Issue issue) {
-		this.id = issue.getId();
-	}
 }
