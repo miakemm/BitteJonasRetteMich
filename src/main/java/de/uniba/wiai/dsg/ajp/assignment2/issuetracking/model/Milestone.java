@@ -3,14 +3,21 @@ package de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model;
 import java.util.LinkedList;
 import java.util.List;
 
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+@JsonIdentityInfo(property = "id",generator = ObjectIdGenerators.PropertyGenerator.class)
 public class Milestone {
-
+	@JsonProperty(value = "id",required = true)
 	private String id;
-
+	@JsonProperty(value = "name",required = true)
 	private String name;
-
+	@JsonProperty(value = "issues",required = false)
 	private List<Issue> issues = new LinkedList<>();
-
+	@JsonIdentityReference(alwaysAsId = true)
 	public String getId() {
 		return id;
 	}
@@ -43,14 +50,5 @@ public class Milestone {
 		}
 		return "Milestone [id=" + id + ", name=" + name + ", issues=( "
 				+ issueNames + ")]";
-	}
-
-	public Milestone findMilestoneById(String milestoneId) { // neu eingefügt
-		for (Milestone milestone : Project.getMilestones()) {
-			if (milestone.getId().equals(milestoneId)) {
-				return milestone;
-			}
-		}
-		return null;
 	}
 }

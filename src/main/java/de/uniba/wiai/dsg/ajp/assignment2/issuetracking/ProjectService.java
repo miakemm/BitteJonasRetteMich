@@ -3,11 +3,7 @@ package de.uniba.wiai.dsg.ajp.assignment2.issuetracking;
 import java.util.List;
 import java.util.Set;
 
-import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.Issue;
-import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.Milestone;
-import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.Severity;
-import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.Type;
-import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.State;
+import de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model.*;
 
 public interface ProjectService {
 
@@ -139,4 +135,6 @@ public interface ProjectService {
 	 *             serialization.
 	 */
 	void saveJsonToFile(String path) throws IssueTrackingException;
+
+    void setProject(Project project);
 }

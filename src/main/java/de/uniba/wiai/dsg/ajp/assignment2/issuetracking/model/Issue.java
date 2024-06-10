@@ -2,30 +2,32 @@ package de.uniba.wiai.dsg.ajp.assignment2.issuetracking.model;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+@JsonIdentityInfo(property = "id",generator = ObjectIdGenerators.PropertyGenerator.class)
 public class Issue {
 
+	@JsonProperty (value = "id",required = true)
 	private String id;
-
+	@JsonProperty (value = "name",required = true)
 	private String name;
-
+	@JsonProperty(value = "description",required = false)
 	private String description;
-
+	@JsonProperty(value = "severity",required = true)
 	private Severity severity;
-
+	@JsonProperty(value = "type",required = true)
 	private Type type;
-
+	@JsonProperty(value = "state",required = true)
 	private State state;
-
+	@JsonProperty(value = "milestone",required = false)
 	private Milestone milestone;
 
 	private List<Issue> dependencies = new LinkedList<>();
-
-	public Issue(String issueId, String s) {
-	}
-
-
+	@JsonIdentityReference(alwaysAsId = true)
 	public String getId() {
 		return id;
 	}
@@ -90,6 +92,7 @@ public class Issue {
 		this.dependencies = dependencies;
 	}
 
+
 	@Override
 	public String toString() {
 		String issueNames = "";
@@ -105,6 +108,8 @@ public class Issue {
 				+ description + ", severity=" + severity + ", type=" + type
 				+ ", state=" + state + ", milestone=" + milestone
 				+ ", dependsUponIssues=( " + issueNames + ")]";
+	}
+	public Issue(String issueId, String s) {
 	}
 
 }

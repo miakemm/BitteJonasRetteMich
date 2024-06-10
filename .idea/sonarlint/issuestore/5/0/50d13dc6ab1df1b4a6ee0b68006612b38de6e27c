@@ -1,9 +1,6 @@
 
-m	java:S1067"+Replace this use of System.out by a logger.(óÏöÿ8•éÙîş1J$b1e1ffe0-2e3a-43a0-bde6-1ac3531c4312
-z
-java:S1135l"2Complete the task associated to this TODO comment.(¤–Íûÿÿÿÿ8šéÙîş1J$95a8e9df-3d7e-43ca-97d5-a46ac99fda5f
-m	java:S106z"+Replace this use of System.out by a logger.(÷¾Äı8›éÙîş1J$d8210dd1-b416-48b9-960a-528a5340111f
-{
-java:S1135™"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ8éÙîş1J$ff43a7f4-5b22-49d8-b8cf-99340d3e36a7
-{
-java:S1135Ÿ"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ8éÙîş1J$038a40ed-25d3-4d1b-99ac-d009db76b686
+
+java:S1192E"KDefine a constant instead of duplicating this literal " not found" 5 times.(†«Í›8ş¶‰Œ€2J$e383ca76-ce8e-4d8f-919e-7629842ce4bb
+m	java:S1066"+Replace this use of System.out by a logger.(óÏöÿ8‹·‰Œ€2J$c5514dd6-0bf3-48bc-b218-9893358acb8a
+n	java:S106“"+Replace this use of System.out by a logger.(÷¾Äı8·‰Œ€2J$164154aa-e310-4316-ad15-7c595bafd632
+n	java:S106·"+Replace this use of System.out by a logger.(øŒ¼Æ8£·‰Œ€2J$16be36ae-56af-401d-96ff-a81f47b6e9e9
