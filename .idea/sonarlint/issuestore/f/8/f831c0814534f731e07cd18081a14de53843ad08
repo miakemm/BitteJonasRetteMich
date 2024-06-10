@@ -1,0 +1,34 @@
+
+j
+java:S1845+"MRename method "exit" to prevent any misunderstanding/clash with field "EXIT".(ÿ¯†—8Ö¾‹‹€2
+F	java:S106"+Replace this use of System.out by a logger.(Ä­ß8Ü¾‹‹€2
+G	java:S106$"+Replace this use of System.out by a logger.(Íñ¯ì8Ü¾‹‹€2
+L	java:S106%"+Replace this use of System.out by a logger.(ï°šİûÿÿÿÿ8İ¾‹‹€2
+F	java:S106&"+Replace this use of System.out by a logger.(Å–ğD8İ¾‹‹€2
+L	java:S106'"+Replace this use of System.out by a logger.(Û‘¢¯ûÿÿÿÿ8İ¾‹‹€2
+L	java:S106-"+Replace this use of System.out by a logger.(º‡©¹øÿÿÿÿ8İ¾‹‹€2
+G	java:S1062"+Replace this use of System.out by a logger.(¢ÔáÊ8Ş¾‹‹€2
+L	java:S1066"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8Ş¾‹‹€2
+C	java:S131>""Add a default case to this switch.(­Ö¹§úÿÿÿÿ8ß¾‹‹€2
+G	java:S106d"+Replace this use of System.out by a logger.(¢ÔáÊ8á¾‹‹€2
+L	java:S106h"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8á¾‹‹€2
+o
+java:S3776l"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.( ü¥é8â¾‹‹€2
+i	java:S128Ò"LEnd this switch case with an unconditional break, return or throw statement.(¬¿×¤8å¾‹‹€2
+C	java:S131w""Add a default case to this switch.(­Ö¹§úÿÿÿÿ8å¾‹‹€2
+M	java:S106¢"+Replace this use of System.out by a logger.(¼¡éšüÿÿÿÿ8è¾‹‹€2
+M	java:S106à"+Replace this use of System.out by a logger.(¨ÙĞ¢ûÿÿÿÿ8ë¾‹‹€2
+H	java:S106ô"+Replace this use of System.out by a logger.(ùÜô¦8í¾‹‹€2
+H	java:S106€"+Replace this use of System.out by a logger.(â¿·š8í¾‹‹€2
+H	java:S106"+Replace this use of System.out by a logger.(ƒ€‹Ÿ8î¾‹‹€2
+G	java:S106‚"+Replace this use of System.out by a logger.(æÄù\8î¾‹‹€2
+M	java:S106ƒ"+Replace this use of System.out by a logger.(‘ê±Ÿûÿÿÿÿ8î¾‹‹€2
+M	java:S106„"+Replace this use of System.out by a logger.(Ê±‚øÿÿÿÿ8î¾‹‹€2
+M	java:S106…"+Replace this use of System.out by a logger.(»ªë¨üÿÿÿÿ8î¾‹‹€2
+H	java:S106†"+Replace this use of System.out by a logger.(ÎÜï³8î¾‹‹€2
+H	java:S106‡"+Replace this use of System.out by a logger.(ßš°Ä8ï¾‹‹€2
+H	java:S106ˆ"+Replace this use of System.out by a logger.(¾¾¥¶8ï¾‹‹€2
+H	java:S106‰"+Replace this use of System.out by a logger.(Û¨8ï¾‹‹€2
+H	java:S106Š"+Replace this use of System.out by a logger.(°î­Ó8ï¾‹‹€2
+ä
+java:S6541l"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 118 to 64, Complexity from 15 to 14, Nesting Level from 3 to 2, Number of Variables from 26 to 6.( ü¥é8ğ¾‹‹€2

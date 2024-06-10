@@ -1,0 +1,11 @@
+
+”	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ïöÀêüÿÿÿÿ8ã’µ‹€2J$c853f02b-bd38-45ad-a763-4341bdde71c0
+^
+java:S3626,"Remove this redundant jump.(ûÁÝ…8ž‡¶‹€2J$a637a26e-6475-4f03-9685-5a5e58547aba
+r	java:S106"+Replace this use of System.err by a logger.(žÍÄ£ûÿÿÿÿ8¢‡¶‹€2J$9c33107a-0e3a-4cd6-8072-ae7204f40bd0
+r	java:S106""+Replace this use of System.err by a logger.(†®¾àøÿÿÿÿ8¢‡¶‹€2J$cc04b8b5-0035-4869-a3d0-5fe4186cc681
+r	java:S106+"+Replace this use of System.err by a logger.(ìí£‡üÿÿÿÿ8£‡¶‹€2J$98bcc510-244f-43dc-bb2b-b15b36f9507b
+j
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonFormat'.(ýÙè‹øÿÿÿÿ8›â¶‹€2
+e
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.databind.ObjectWriter'.(ö·ÙÆ8›â¶‹€2
